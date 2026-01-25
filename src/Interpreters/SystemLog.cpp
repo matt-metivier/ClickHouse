@@ -876,10 +876,6 @@ void SystemLog<LogElement>::addSettingsForQuery(ContextMutablePtr & mutable_cont
         mutable_context->setSetting("check_table_dependencies", Field{false});
         mutable_context->setSetting("check_referential_table_dependencies", Field{false});
     }
-    else if (query_kind == IAST::QueryKind::Alter)
-    {
-        /// No special settings needed for ALTER, but we need to handle this case
-    }
 }
 
 template <typename LogElement>
